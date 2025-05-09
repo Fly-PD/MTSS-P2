@@ -184,4 +184,68 @@ public class IntegerToRomanTest {
         String result = IntegerToRoman.convert(input);
         assertEquals("L", result);
     }
+
+    /// Primi 100
+    @Test
+    public void conversione_51() {
+        int input = 51;
+        String result = IntegerToRoman.convert(input);
+        assertEquals("LI", result);
+    }
+
+    @Test
+    public void conversione_55() {
+        int input = 55;
+        String result = IntegerToRoman.convert(input);
+        assertEquals("LV", result);
+    }
+
+    @Test
+    public void conversione_59() {
+        int input = 59;
+        String result = IntegerToRoman.convert(input);
+        assertEquals("LIX", result);
+    }
+
+    @Test
+    public void conversione_60() {
+        int input = 60;
+        String result = IntegerToRoman.convert(input);
+        assertEquals("LX", result);
+    }
+
+    @Test
+    public void conversione_70() {
+        int input = 70;
+        String result = IntegerToRoman.convert(input);
+        assertEquals("LXX", result);
+    }
+
+    @Test
+    public void conversione_80() {
+        int input = 80;
+        String result = IntegerToRoman.convert(input);
+        assertEquals("LXXX", result);
+    }
+
+    @Test
+    public void conversione_90() {
+        int input = 90;
+        String result = IntegerToRoman.convert(input);
+        assertEquals("XC", result);
+    }
+
+    @Test
+    public void conversione_99() {
+        int input = 99;
+        String result = IntegerToRoman.convert(input);
+        assertEquals("XCIX", result);
+    }
+
+    @Test
+    public void conversione_100() {
+        int input = 100;
+        String result = IntegerToRoman.convert(input);
+        assertEquals("C", result);
+    }
 }
