@@ -319,4 +319,89 @@ public class IntegerToRomanTest {
         String result = IntegerToRoman.convert(input);
         assertEquals("D", result);
     }
+
+    /// Primi 1000
+    @Test
+    public void conversione_501() {
+        int input = 501;
+        String result = IntegerToRoman.convert(input);
+        assertEquals("DI", result);
+    }
+
+    @Test
+    public void conversione_550() {
+        int input = 550;
+        String result = IntegerToRoman.convert(input);
+        assertEquals("DL", result);
+    }
+
+    @Test
+    public void conversione_599() {
+        int input = 599;
+        String result = IntegerToRoman.convert(input);
+        assertEquals("DXCIX", result);
+    }
+
+    @Test
+    public void conversione_600() {
+        int input = 600;
+        String result = IntegerToRoman.convert(input);
+        assertEquals("DC", result);
+    }
+
+    @Test
+    public void conversione_700() {
+        int input = 700;
+        String result = IntegerToRoman.convert(input);
+        assertEquals("DCC", result);
+    }
+
+    @Test
+    public void conversione_800() {
+        int input = 800;
+        String result = IntegerToRoman.convert(input);
+        assertEquals("DCCC", result);
+    }
+
+    @Test
+    public void conversione_900() {
+        int input = 900;
+        String result = IntegerToRoman.convert(input);
+        assertEquals("CM", result);
+    }
+
+    @Test
+    public void conversione_950() {
+        int input = 950;
+        String result = IntegerToRoman.convert(input);
+        assertEquals("CML", result);
+    }
+
+    @Test
+    public void conversione_999() {
+        int input = 999;
+        String result = IntegerToRoman.convert(input);
+        assertEquals("CMXCIX", result);
+    }
+
+    @Test
+    public void conversione_1k() {
+        int input = 1000;
+        String result = IntegerToRoman.convert(input);
+        assertEquals("M", result);
+    }
+
+    @Test
+    public void conversione_750() {
+        int input = 750;
+        String result = IntegerToRoman.convert(input);
+        assertEquals("DCCL", result);
+    }
+
+    @Test
+    public void conversione_850() {
+        int input = 850;
+        String result = IntegerToRoman.convert(input);
+        assertEquals("DCCCL", result);
+    }
 }
