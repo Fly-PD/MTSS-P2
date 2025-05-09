@@ -5,6 +5,9 @@
 
 package it.unipd.mtss;
 
+import java.util.Dictionary;
+import java.util.Hashtable;
+
 public class RomanPrinter {
     private RomanPrinter() {}     // Altrimenti JaCoCo si aspetta test sull'istanziazione
 
@@ -13,24 +16,59 @@ public class RomanPrinter {
     } 
     
     private static String printAsciiArt(String romanNumber) {
-        if(!romanNumber.matches("[IVXLCDM]+")) { throw new IllegalArgumentException(); }
-        String[] I = {
-                " _____ ",
-                "|_   _|",
-                "  | |  ",
-                "  | |  ",
-                " _| |_ ",
-                "|_____|"
-        };
+        if (!romanNumber.matches("[IVXLCDM]+")) {
+            throw new IllegalArgumentException();
+        }
+        Dictionary<Character, String[]> asciiArtDict = new Hashtable<Character, String[]>();
+        asciiArtDict.put('I', new String[] {
+            " _____ ",
+            "|_   _|",
+            "  | |  ",
+            "  | |  ",
+            " _| |_ ",
+            "|_____|"
+        });
+        asciiArtDict.put('V', new String[] {
+            "__      __",
+            "\\ \\    / /",
+            " \\ \\  / / ",
+            "  \\ \\/ /  ",
+            "   \\  /   ",
+            "    \\/    "
+        });
+        asciiArtDict.put('X', new String[] {
+            "__   __",
+            "\\ \\ / /",
+            " \\ V / ",
+            "  > <  ",
+            " / . \\ ",
+            "/_/ \\_\\"
+        });
+        asciiArtDict.put('L', new String[]{
+            " _      ",
+            "| |     ",
+            "| |     ",
+            "| |     ",
+            "| |____ ",
+            "|______|"
+        });
+        String asciiArt = "";
         String[] lines = {"", "", "", "", "", ""};
-    
+
         for (int j = 0; j < romanNumber.length(); j++) {
-    
+            String[] symbolArt = asciiArtDict.get(romanNumber.charAt(j));
+
             for (int i = 0; i < 6; i++) {
-                lines[i] += I[i];
-                if (j < romanNumber.length() - 1) { lines[i] += " "; }
+                lines[i] += symbolArt[i];
+                if (j < romanNumber.length() - 1) {
+                    lines[i] += " ";
+                }
             }
         }
-        return String.join("\n", lines) + "\n";
+
+        for (String line : lines) {
+            asciiArt += line += "\n";
+        }
+        return asciiArt;
     }
 }
