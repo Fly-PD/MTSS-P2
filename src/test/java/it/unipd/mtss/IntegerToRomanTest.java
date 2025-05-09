@@ -248,4 +248,75 @@ public class IntegerToRomanTest {
         String result = IntegerToRoman.convert(input);
         assertEquals("C", result);
     }
+
+    /// Primi 500
+    @Test
+    public void conversione_101() {
+        int input = 101;
+        String result = IntegerToRoman.convert(input);
+        assertEquals("CI", result);
+    }
+
+    @Test
+    public void conversione_150() {
+        int input = 150;
+        String result = IntegerToRoman.convert(input);
+        assertEquals("CL", result);
+    }
+
+    @Test
+    public void conversione_199() {
+        int input = 199;
+        String result = IntegerToRoman.convert(input);
+        assertEquals("CXCIX", result);
+    }
+
+    @Test
+    public void conversione_200() {
+        int input = 200;
+        String result = IntegerToRoman.convert(input);
+        assertEquals("CC", result);
+    }
+
+    @Test
+    public void conversione_250() {
+        int input = 250;
+        String result = IntegerToRoman.convert(input);
+        assertEquals("CCL", result);
+    }
+
+    @Test
+    public void conversione_300() {
+        int input = 300;
+        String result = IntegerToRoman.convert(input);
+        assertEquals("CCC", result);
+    }
+
+    @Test
+    public void conversione_399() {
+        int input = 399;
+        String result = IntegerToRoman.convert(input);
+        assertEquals("CCCXCIX", result);
+    }
+
+    @Test
+    public void conversione_400() {
+        int input = 400;
+        String result = IntegerToRoman.convert(input);
+        assertEquals("CD", result);
+    }
+
+    @Test
+    public void conversione_450() {
+        int input = 450;
+        String result = IntegerToRoman.convert(input);
+        assertEquals("CDL", result);
+    }
+
+    @Test
+    public void conversione_500() {
+        int input = 500;
+        String result = IntegerToRoman.convert(input);
+        assertEquals("D", result);
+    }
 }
