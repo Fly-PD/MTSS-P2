@@ -32,10 +32,21 @@ public class RomanPrinter {
                 "   \\  /   ",
                 "    \\/    "
         };
+        String[] X = {
+                "__   __",
+                "\\ \\ / /",
+                " \\ V / ",
+                "  > <  ",
+                " / . \\ ",
+                "/_/ \\_\\"
+        };
         String[] lines = { "", "", "", "", "", "" };
         for (int j = 0; j < romanNumber.length(); j++) {
+            String[] letter;
+            if (romanNumber.charAt(j) == 'I') { letter = I; } 
+            else if (romanNumber.charAt(j) == 'V') { letter = V; } 
+            else { letter = X; }
     
-            String[] letter = romanNumber.charAt(j) == 'I' ? I : V;
             for (int i = 0; i < 6; i++) {
                 lines[i] += letter[i];
                 if (j < romanNumber.length() - 1) {

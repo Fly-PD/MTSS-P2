@@ -91,4 +91,41 @@ public class RomanPrinterTest {
         assertEquals(asciiArt, RomanPrinter.print(6));
     }
 
+    /// Primi 10
+    @Test
+    public void testPrint7() {
+        String expected = 
+            "__      __  _____   _____ \n" +
+            "\\ \\    / / |_   _| |_   _|\n" +
+            " \\ \\  / /    | |     | |  \n" +
+            "  \\ \\/ /     | |     | |  \n" +
+            "   \\  /     _| |_   _| |_ \n" +
+            "    \\/     |_____| |_____|\n";
+        assertEquals(expected, RomanPrinter.print(7));
+    }
+
+    @Test
+    public void testPrint9() {
+        String expected =
+        " _____  __   __\n" +
+        "|_   _| \\ \\ / /\n" +
+        "  | |    \\ V / \n" +
+        "  | |     > <  \n" +
+        " _| |_   / . \\ \n" +
+        "|_____| /_/ \\_\\\n";
+        assertEquals(expected, RomanPrinter.print(9));
+    }
+
+    @Test
+    public void testPrint10() {
+        String expected = 
+        "__   __\n" +
+        "\\ \\ / /\n" +
+        " \\ V / \n" +
+        "  > <  \n" +
+        " / . \\ \n" +
+        "/_/ \\_\\\n";
+        assertEquals(expected, RomanPrinter.print(10));
+    }
+
 }
