@@ -8,9 +8,9 @@ package it.unipd.mtss;
 public class IntegerToRoman {
     public static String convert(int number) {
         if (number <= 0) { throw new IllegalArgumentException("Il numero deve essere maggiore di 0"); }
-    
-        int[] valori = {50, 40, 10, 9, 5, 4, 1};
-        String[] simboli_romani = {"L", "XL", "X","IX","V","IV","I"};
+        
+        int[] valori = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
+        String[] simboli_romani = {"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X","IX","V","IV","I"};
         String result = "";
         
         for (int i = 0; i < valori.length && number > 0; i++) {

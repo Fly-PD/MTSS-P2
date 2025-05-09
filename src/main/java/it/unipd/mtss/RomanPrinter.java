@@ -52,12 +52,36 @@ public class RomanPrinter {
             "| |____ ",
             "|______|"
         });
+        asciiArtDict.put('C', new String[]{
+            "  _____ ",
+            " / ____|",
+            "| |     ",
+            "| |     ",
+            "| |____ ",
+            " \\_____|"
+        });
+        asciiArtDict.put('D', new String[]{
+            " _____  ",
+            "|  __ \\ ",
+            "| |  | |",
+            "| |  | |",
+            "| |__| |",
+            "|_____/ "
+        });
+        asciiArtDict.put('M', new String[]{
+            " __  __ ",
+            "|  \\/  |",
+            "| \\  / |",
+            "| |\\/| |",
+            "| |  | |",
+            "|_|  |_|"
+        });
         String asciiArt = "";
         String[] lines = {"", "", "", "", "", ""};
-
+    
         for (int j = 0; j < romanNumber.length(); j++) {
             String[] symbolArt = asciiArtDict.get(romanNumber.charAt(j));
-
+    
             for (int i = 0; i < 6; i++) {
                 lines[i] += symbolArt[i];
                 if (j < romanNumber.length() - 1) {
@@ -65,7 +89,7 @@ public class RomanPrinter {
                 }
             }
         }
-
+    
         for (String line : lines) {
             asciiArt += line += "\n";
         }
