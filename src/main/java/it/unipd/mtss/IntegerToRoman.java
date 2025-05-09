@@ -8,18 +8,17 @@ package it.unipd.mtss;
 public class IntegerToRoman {
     public static String convert(int number) {
         if (number <= 0) { throw new IllegalArgumentException("Il numero deve essere maggiore di 0"); }
-
+    
+        int[] valori = {10, 9, 5, 4, 1};
+        String[] simboli_romani = {"X","IX","V","IV","I"};
         String result = "";
-        if (number == 10) { return "X"; }
-        if (number == 9) { return "IX"; }
-        if (number >= 5) {
-            result += "V";
-            number -= 5;
+        
+        for (int i = 0; i < valori.length && number > 0; i++) {
+            while (number >= valori[i]) {
+                number -= valori[i];
+                result += simboli_romani[i];
+            }
         }
-        if (number == 4) { return "IV"; }
-        if (number < 4) {
-            result += "I".repeat(number);
-        }
-        return result;
+        return result.toString();
     }
 }

@@ -91,4 +91,33 @@ public class IntegerToRomanTest {
         String result = IntegerToRoman.convert(input);
         assertEquals("X", result);
     }
+
+    /// Primi 20
+    @Test
+    public void conversione_14() {
+        int input = 14;
+        String result = IntegerToRoman.convert(input);
+        assertEquals("XIV", result);
+    }
+
+    @Test
+    public void conversione_15() {
+        int input = 15;
+        String result = IntegerToRoman.convert(input);
+        assertEquals("XV", result);
+    }
+
+    @Test
+    public void conversione_19() {
+        int input = 19;
+        String result = IntegerToRoman.convert(input);
+        assertEquals("XIX", result);
+    }
+
+    @Test
+    public void conversione_20() {
+        int input = 20;
+        String result = IntegerToRoman.convert(input);
+        assertEquals("XX", result);
+    }
 }
