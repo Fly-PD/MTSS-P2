@@ -5,6 +5,9 @@
 
 package it.unipd.mtss;
 
+import java.util.Dictionary;
+import java.util.Hashtable;
+
 public class RomanPrinter {
     private RomanPrinter() {}     // Altrimenti JaCoCo si aspetta test sull'istanziazione
 
@@ -16,44 +19,56 @@ public class RomanPrinter {
         if (!romanNumber.matches("[IVXLCDM]+")) {
             throw new IllegalArgumentException();
         }
-        String[] I = {
-                " _____ ",
-                "|_   _|",
-                "  | |  ",
-                "  | |  ",
-                " _| |_ ",
-                "|_____|"
-        };
-        String[] V = {
-                "__      __",
-                "\\ \\    / /",
-                " \\ \\  / / ",
-                "  \\ \\/ /  ",
-                "   \\  /   ",
-                "    \\/    "
-        };
-        String[] X = {
-                "__   __",
-                "\\ \\ / /",
-                " \\ V / ",
-                "  > <  ",
-                " / . \\ ",
-                "/_/ \\_\\"
-        };
-        String[] lines = { "", "", "", "", "", "" };
+        Dictionary<Character, String[]> asciiArtDict = new Hashtable<Character, String[]>();
+        asciiArtDict.put('I', new String[] {
+            " _____ ",
+            "|_   _|",
+            "  | |  ",
+            "  | |  ",
+            " _| |_ ",
+            "|_____|"
+        });
+        asciiArtDict.put('V', new String[] {
+            "__      __",
+            "\\ \\    / /",
+            " \\ \\  / / ",
+            "  \\ \\/ /  ",
+            "   \\  /   ",
+            "    \\/    "
+        });
+        asciiArtDict.put('X', new String[] {
+            "__   __",
+            "\\ \\ / /",
+            " \\ V / ",
+            "  > <  ",
+            " / . \\ ",
+            "/_/ \\_\\"
+        });
+        asciiArtDict.put('L', new String[]{
+            " _      ",
+            "| |     ",
+            "| |     ",
+            "| |     ",
+            "| |____ ",
+            "|______|"
+        });
+        String asciiArt = "";
+        String[] lines = {"", "", "", "", "", ""};
+
         for (int j = 0; j < romanNumber.length(); j++) {
-            String[] letter;
-            if (romanNumber.charAt(j) == 'I') { letter = I; } 
-            else if (romanNumber.charAt(j) == 'V') { letter = V; } 
-            else { letter = X; }
+            String[] symbolArt = asciiArtDict.get(romanNumber.charAt(j));
 
             for (int i = 0; i < 6; i++) {
-                lines[i] += letter[i];
+                lines[i] += symbolArt[i];
                 if (j < romanNumber.length() - 1) {
                     lines[i] += " ";
                 }
             }
         }
-        return String.join("\n", lines) + "\n";
+
+        for (String line : lines) {
+            asciiArt += line += "\n";
+        }
+        return asciiArt;
     }
 }

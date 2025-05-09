@@ -191,4 +191,60 @@ public class RomanPrinterTest {
                 "/_/ \\_\\ /_/ \\_\\\n";
         assertEquals(expected, RomanPrinter.print(20));
     }
+
+    /// primi 50
+    @Test
+    public void testPrint21() {
+        String expected = "__   __ __   __  _____ \n" +
+                "\\ \\ / / \\ \\ / / |_   _|\n" +
+                " \\ V /   \\ V /    | |  \n" +
+                "  > <     > <     | |  \n" +
+                " / . \\   / . \\   _| |_ \n" +
+                "/_/ \\_\\ /_/ \\_\\ |_____|\n";
+        assertEquals(expected, RomanPrinter.print(21));
+    }
+
+    @Test
+    public void testPrint25() {
+        String expected = "__   __ __   __ __      __\n" +
+                "\\ \\ / / \\ \\ / / \\ \\    / /\n" +
+                " \\ V /   \\ V /   \\ \\  / / \n" +
+                "  > <     > <     \\ \\/ /  \n" +
+                " / . \\   / . \\     \\  /   \n" +
+                "/_/ \\_\\ /_/ \\_\\     \\/    \n";
+        assertEquals(expected, RomanPrinter.print(25));
+    }
+
+    @Test
+    public void testPrint30() {
+        String expected = "__   __ __   __ __   __\n" +
+                "\\ \\ / / \\ \\ / / \\ \\ / /\n" +
+                " \\ V /   \\ V /   \\ V / \n" +
+                "  > <     > <     > <  \n" +
+                " / . \\   / . \\   / . \\ \n" +
+                "/_/ \\_\\ /_/ \\_\\ /_/ \\_\\\n";
+        assertEquals(expected, RomanPrinter.print(30));
+    }
+
+    @Test
+    public void testPrint40() {
+        String expected = "__   __  _      \n" +
+                "\\ \\ / / | |     \n" +
+                " \\ V /  | |     \n" +
+                "  > <   | |     \n" +
+                " / . \\  | |____ \n" +
+                "/_/ \\_\\ |______|\n";
+        assertEquals(expected, RomanPrinter.print(40));
+    }
+
+    @Test
+    public void testPrint50() {
+        String expected = " _      \n" +
+                "| |     \n" +
+                "| |     \n" +
+                "| |     \n" +
+                "| |____ \n" +
+                "|______|\n";
+        assertEquals(expected, RomanPrinter.print(50));
+    }
 }
