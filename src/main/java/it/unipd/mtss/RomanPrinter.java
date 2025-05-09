@@ -68,6 +68,14 @@ public class RomanPrinter {
             "| |__| |",
             "|_____/ "
         });
+        asciiArtDict.put('M', new String[]{
+            " __  __ ",
+            "|  \\/  |",
+            "| \\  / |",
+            "| |\\/| |",
+            "| |  | |",
+            "|_|  |_|"
+        });
         String asciiArt = "";
         String[] lines = {"", "", "", "", "", ""};
     
