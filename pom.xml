@@ -121,7 +121,6 @@
           <excludes>
             <exclude>**/App.*</exclude>
             <exclude>**/RomanPrinter.*</exclude>
-            <exclude>**/IntegerToRoman.*</exclude>
           </excludes>
         </configuration>
         <executions>
