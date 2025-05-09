@@ -54,4 +54,41 @@ public class RomanPrinterTest {
         assertEquals(expectedAsciiArt, actualAsciiArt);
     }
 
+    /// Primi 6
+    @Test
+    public void testPrint4() {
+        String asciiArt = " _____  __      __\n" 
+                        + "|_   _| \\ \\    / /\n"
+                        + "  | |    \\ \\  / / \n"
+                        + "  | |     \\ \\/ /  \n"
+                        + " _| |_     \\  /   \n"
+                        + "|_____|     \\/    \n";
+
+        assertEquals(asciiArt, RomanPrinter.print(4));
+    }
+
+    @Test
+    public void testPrint5() {
+        String asciiArt = "__      __\n" 
+                        + "\\ \\    / /\n"
+                        + " \\ \\  / / \n"
+                        + "  \\ \\/ /  \n"
+                        + "   \\  /   \n"
+                        + "    \\/    \n";
+
+        assertEquals(asciiArt, RomanPrinter.print(5));
+    }
+
+    @Test
+    public void testPrint6() {
+        String asciiArt = "__      __  _____ \n" 
+                        + "\\ \\    / / |_   _|\n"
+                        + " \\ \\  / /    | |  \n"
+                        + "  \\ \\/ /     | |  \n"
+                        + "   \\  /     _| |_ \n"
+                        + "    \\/     |_____|\n";
+
+        assertEquals(asciiArt, RomanPrinter.print(6));
+    }
+
 }

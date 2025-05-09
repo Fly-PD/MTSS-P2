@@ -13,7 +13,9 @@ public class RomanPrinter {
     } 
     
     private static String printAsciiArt(String romanNumber) {
-        if(!romanNumber.matches("[IVXLCDM]+")) { throw new IllegalArgumentException(); }
+        if (!romanNumber.matches("[IVXLCDM]+")) {
+            throw new IllegalArgumentException();
+        }
         String[] I = {
                 " _____ ",
                 "|_   _|",
@@ -22,13 +24,23 @@ public class RomanPrinter {
                 " _| |_ ",
                 "|_____|"
         };
-        String[] lines = {"", "", "", "", "", ""};
-    
+        String[] V = {
+                "__      __",
+                "\\ \\    / /",
+                " \\ \\  / / ",
+                "  \\ \\/ /  ",
+                "   \\  /   ",
+                "    \\/    "
+        };
+        String[] lines = { "", "", "", "", "", "" };
         for (int j = 0; j < romanNumber.length(); j++) {
     
+            String[] letter = romanNumber.charAt(j) == 'I' ? I : V;
             for (int i = 0; i < 6; i++) {
-                lines[i] += I[i];
-                if (j < romanNumber.length() - 1) { lines[i] += " "; }
+                lines[i] += letter[i];
+                if (j < romanNumber.length() - 1) {
+                    lines[i] += " ";
+                }
             }
         }
         return String.join("\n", lines) + "\n";
