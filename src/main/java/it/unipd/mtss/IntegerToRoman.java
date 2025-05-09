@@ -6,19 +6,20 @@
 package it.unipd.mtss;
 
 public class IntegerToRoman {
-    private IntegerToRoman() {
-    } // Altrimenti JaCoCo si aspetta test sull'istanziazione
-
     public static String convert(int number) {
-
         if (number <= 0) { throw new IllegalArgumentException("Il numero deve essere maggiore di 0"); }
+
         String result = "";
+        if (number == 10) { return "X"; }
+        if (number == 9) { return "IX"; }
         if (number >= 5) {
             result += "V";
             number -= 5;
         }
         if (number == 4) { return "IV"; }
-        if (number < 4) { result += "I".repeat(number); }
+        if (number < 4) {
+            result += "I".repeat(number);
+        }
         return result;
     }
 }
