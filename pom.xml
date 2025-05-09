@@ -120,7 +120,6 @@
         <configuration>
           <excludes>
             <exclude>**/App.*</exclude>
-            <exclude>**/RomanPrinter.*</exclude>
           </excludes>
         </configuration>
         <executions>

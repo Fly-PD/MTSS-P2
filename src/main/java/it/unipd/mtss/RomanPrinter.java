@@ -12,8 +12,25 @@ public class RomanPrinter {
         return printAsciiArt(IntegerToRoman.convert(num)); 
     } 
     
-    private static String printAsciiArt(String romanNumber) { 
-        //TODO 
-        return null; 
+    private static String printAsciiArt(String romanNumber) {
+        if(!romanNumber.matches("[IVXLCDM]+")) { throw new IllegalArgumentException(); }
+        String[] I = {
+                " _____ ",
+                "|_   _|",
+                "  | |  ",
+                "  | |  ",
+                " _| |_ ",
+                "|_____|"
+        };
+        String[] lines = {"", "", "", "", "", ""};
+    
+        for (int j = 0; j < romanNumber.length(); j++) {
+    
+            for (int i = 0; i < 6; i++) {
+                lines[i] += I[i];
+                if (j < romanNumber.length() - 1) { lines[i] += " "; }
+            }
+        }
+        return String.join("\n", lines) + "\n";
     }
 }
