@@ -46,7 +46,7 @@ public class RomanPrinter {
             if (romanNumber.charAt(j) == 'I') { letter = I; } 
             else if (romanNumber.charAt(j) == 'V') { letter = V; } 
             else { letter = X; }
-    
+
             for (int i = 0; i < 6; i++) {
                 lines[i] += letter[i];
                 if (j < romanNumber.length() - 1) {
