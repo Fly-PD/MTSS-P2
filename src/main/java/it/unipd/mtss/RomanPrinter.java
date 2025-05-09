@@ -60,6 +60,14 @@ public class RomanPrinter {
             "| |____ ",
             " \\_____|"
         });
+        asciiArtDict.put('D', new String[]{
+            " _____  ",
+            "|  __ \\ ",
+            "| |  | |",
+            "| |  | |",
+            "| |__| |",
+            "|_____/ "
+        });
         String asciiArt = "";
         String[] lines = {"", "", "", "", "", ""};
     

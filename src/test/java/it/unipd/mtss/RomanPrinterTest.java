@@ -321,4 +321,66 @@ public class RomanPrinterTest {
         " \\_____|\n";
         assertEquals(expected, RomanPrinter.print(100));
     }
+
+    /// primi 500
+    @Test
+    public void testPrint149() {
+        String expected =
+            "  _____  __   __  _        _____  __   __\n" +
+            " / ____| \\ \\ / / | |      |_   _| \\ \\ / /\n" +
+            "| |       \\ V /  | |        | |    \\ V / \n" +
+            "| |        > <   | |        | |     > <  \n" +
+            "| |____   / . \\  | |____   _| |_   / . \\ \n" +
+            " \\_____| /_/ \\_\\ |______| |_____| /_/ \\_\\\n";
+        assertEquals(expected, RomanPrinter.print(149));
+    }
+
+    @Test
+    public void testPrint212() {
+        String expected =
+            "  _____    _____  __   __  _____   _____ \n" +
+            " / ____|  / ____| \\ \\ / / |_   _| |_   _|\n" +
+            "| |      | |       \\ V /    | |     | |  \n" +
+            "| |      | |        > <     | |     | |  \n" +
+            "| |____  | |____   / . \\   _| |_   _| |_ \n" +
+            " \\_____|  \\_____| /_/ \\_\\ |_____| |_____|\n";
+        assertEquals(expected, RomanPrinter.print(212));
+    }
+
+    @Test
+    public void testPrint300() {
+        String expected =
+        "  _____    _____    _____ \n" +
+        " / ____|  / ____|  / ____|\n" +
+        "| |      | |      | |     \n" +
+        "| |      | |      | |     \n" +
+        "| |____  | |____  | |____ \n" +
+        " \\_____|  \\_____|  \\_____|\n";
+        assertEquals(expected, RomanPrinter.print(300));
+    }
+
+    @Test
+    public void testPrint470() {
+        String expected =
+            "  _____   _____    _       __   __ __   __\n" +
+            " / ____| |  __ \\  | |      \\ \\ / / \\ \\ / /\n" +
+            "| |      | |  | | | |       \\ V /   \\ V / \n" +
+            "| |      | |  | | | |        > <     > <  \n" +
+            "| |____  | |__| | | |____   / . \\   / . \\ \n" +
+            " \\_____| |_____/  |______| /_/ \\_\\ /_/ \\_\\\n";
+        assertEquals(expected, RomanPrinter.print(470));
+    }
+
+    @Test
+    public void testPrint521() {
+        String expected =
+        " _____   __   __ __   __  _____ \n" +
+        "|  __ \\  \\ \\ / / \\ \\ / / |_   _|\n" +
+        "| |  | |  \\ V /   \\ V /    | |  \n" +
+        "| |  | |   > <     > <     | |  \n" +
+        "| |__| |  / . \\   / . \\   _| |_ \n" +
+        "|_____/  /_/ \\_\\ /_/ \\_\\ |_____|\n";
+        assertEquals(expected, RomanPrinter.print(521));
+    }
+
 }
